@@ -2,7 +2,12 @@
 
 int main()
 {
-    Node *node_a = create_node(5);
+    BST *root = NULL;
+
+    insert_tree(root, 22);
+    
+
+
 
  
     return 0;
