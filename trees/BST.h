@@ -1,16 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct Node
 {
     int data;
-    Node *left;
-    Node *right;
+    struct Node *left;
+    struct Node *right;
 } Node;
 
-Node *create_node(int n) {
-    structe
-}
-
+Node *create_node(int n);
 
 typedef struct BST 
 {
@@ -18,10 +16,7 @@ typedef struct BST
     int size;
 } BST;
 
-
-BST *create(int n);
-
-BST *create(Node *root);
+BST *insert(Node *root);
 
 
 

@@ -4,18 +4,13 @@ Node *create_node(int n)
 {
     int *ptr_val = (int *) malloc(sizeof(Node));
 
-
-}
-
-BST *create(int n) 
-{
     return NULL;
 };
 
-BST insert*(node *root) 
+BST *insert(Node *root) 
 {
     root = root;
-    size = 1;
+    // size = 1;
 
 };
 
