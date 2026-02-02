@@ -16,7 +16,9 @@ typedef struct BST
     int size;
 } BST;
 
-BST *insert(Node *root);
+Node *insert(Node *root);
+
+BST *insert_tree(BST *tree, int key);
 
 BST *create_empty_tree();
 

@@ -34,6 +34,16 @@ Node *insert(Node *root, int data)
     return root;
 };
 
+BST *insert_tree(BST *root, int key)
+{
+    if (root->size == 0 || root == NULL)
+    {
+        BST *new_tree = create_empty_tree();
+        insert_tree(new_tree, key);
+
+    } 
+}
+
 
 
 
