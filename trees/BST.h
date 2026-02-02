@@ -1,23 +1,27 @@
 #include <stdio.h>
 
-typedef struct node
+typedef struct Node
 {
     int data;
-    node *left;
-    node *right;
-} node;
+    Node *left;
+    Node *right;
+} Node;
+
+Node *create_node(int n) {
+    structe
+}
 
 
 typedef struct BST 
 {
-    node *root;
+    Node *root;
     int size;
 } BST;
 
 
-BST* create(int n);
+BST *create(int n);
 
-BST* create(node *root);
+BST *create(Node *root);
 
 
 
