@@ -18,11 +18,11 @@ BST *create_empty_tree()
     return new_tree;
 }
 
-BST *insert(Node *root, int data) 
+Node *insert(Node *root, int data) 
 {
-    if (root == NULL) 
+    if (root == NULL) // insert here
     {
-        return insert(create_node(data), data);
+        return create_node(data);
     }
 
     if (data < root->data) // insert somewhere in left subtree
@@ -30,11 +30,8 @@ BST *insert(Node *root, int data)
     else if (data > root->data) // insert somewhere in right subtree
         root->right = insert(root->right, data);
 
-    if 
 
-    root = root;
-    // size = 1;
-
+    return root;
 };
 
 
