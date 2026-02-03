@@ -20,8 +20,16 @@ Node *insert(Node *root, int data);
 
 void insert_tree(BST *bst, int key);
 
+Node *insert_rec(Node *root, int data);
+
+void insert_tree_rec(BST *bst, int key);
+
 BST *create_empty_tree();
 
 void traverse_inorder_tree(BST *tree);
 
 void traverse_inorder_node(Node *root);
+
+void traverse_levelorder_tree(BST *tree);
+
+void traverse_levelorder_node(Node *root);

@@ -41,6 +41,48 @@ void insert_tree(BST *bst, int key)
     }
 
     bst->root = insert(bst->root, key);
+    //TODO: fix case where size increased with duplicate key
+    bst->size++;
+}
+
+Node *insert_rec(Node *root, int data)
+{
+    if (root == NULL) 
+    {
+        return create_node(data);
+    }
+
+    Node *current = root;
+    while (current != NULL) {
+        int current_key = current->data;
+
+        if (data < current_key && (current->left != NULL)) {
+            current = current->left;
+        } 
+        else if (data > current_key && (current->right != NULL)) {
+            current = current->right;
+        } else {
+            break;
+        }
+    }
+
+    if (data < current->data) {
+        current->left = create_node(data);
+    } else if (data > current->data) {
+        current->right = create_node(data);
+    } // duplicates are not allowed
+    return root;
+}
+
+void insert_tree_rec(BST *bst, int key)
+{
+    if (bst == NULL)
+    {
+        return;
+    }
+
+    bst->root = insert_rec(bst->root, key);
+    //TODO: fix case where size increased with duplicate key
     bst->size++;
 }
 
@@ -68,9 +110,6 @@ void traverse_inorder_node(Node *root)
 
     traverse_inorder_node(root->right);
 }
-
-
-
 
 
 
