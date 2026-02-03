@@ -60,7 +60,6 @@ int main(void)
     BST *bst = create_empty_tree();
 
     insert_tree(bst, 100);
-    DBG("root is %d\n", bst->root->data);
     ASSERT_NODE(bst->root, 100, NULL, NULL);
     ASSERT_EQ_INT(1, bst->size);
 
@@ -74,6 +73,7 @@ int main(void)
 
     ASSERT_EQ_INT(5, bst->size);
 
+    printf("in-order traversal is: ");
     traverse_inorder_tree(bst);
     return 0;
 }
