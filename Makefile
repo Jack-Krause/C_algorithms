@@ -3,6 +3,7 @@ CFLAGS = -Wall -Wextra -g
 
 all: testbst
 
+
 testbst: trees/TestTrees.o trees/BST.o
 	$(CC) $(CFLAGS) -o testbst trees/TestTrees.o trees/BST.o
 

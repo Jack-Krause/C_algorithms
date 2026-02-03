@@ -1,0 +1,24 @@
+GDB QUICK-START GUIDE
+
+Compile with debug symbols: gcc -g -Wall -Wextra main.c -o program
+
+Start gdb: gdb ./program gdb –args ./program arg1 arg2
+
+RUNNING & RESTARTING run -> start program run -> restart program kill ->
+stop program
+
+BREAKPOINTS break main break functionName break 42 -> break at line 42
+info breakpoints delete 1 -> delete breakpoint 1
+
+VIEWING CODE list frame
+
+STEPPING step -> step into next -> step over continue -> continue to
+next breakpoint finish -> finish current function
+
+VARIABLES print x print *ptr print node display x info locals info args
+
+STACK backtrace up down
+
+ON CRASH run backtrace info locals
+
+QUIT quit

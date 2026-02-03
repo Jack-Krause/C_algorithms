@@ -22,5 +22,6 @@ BST *insert_tree(BST *tree, int key);
 
 BST *create_empty_tree();
 
-void traverse_inorder(BST *tree);
+void traverse_inorder_tree(BST *tree);
 
+void traverse_inorder_node(Node *root);
