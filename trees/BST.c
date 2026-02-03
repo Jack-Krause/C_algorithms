@@ -44,7 +44,6 @@ void insert_tree(BST *bst, int key)
     bst->size++;
 }
 
-
 void traverse_inorder_tree(BST *tree)
 {
     if (tree == NULL || tree->size == 0) {
