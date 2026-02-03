@@ -16,11 +16,11 @@ typedef struct BST
     int size;
 } BST;
 
-Node *insert(Node *root);
+Node *insert(Node *root, int data);
 
 BST *insert_tree(BST *tree, int key);
 
 BST *create_empty_tree();
 
-
+void traverse_inorder(BST *tree);
 

@@ -34,19 +34,30 @@ Node *insert(Node *root, int data)
     return root;
 };
 
-BST *insert_tree(BST *root, int key)
+BST *insert_tree(BST *bst, int key)
 {
-    if (root->size == 0 || root == NULL)
+    if (bst == NULL || bst->size == 0)
     {
         BST *new_tree = create_empty_tree();
-        insert_tree(new_tree, key);
-
+        new_tree->root = insert(new_tree->root, key);
+        return new_tree;
     } 
+    else
+    {
+        insert(bst->root, key);
+        return bst;
+    }
 }
 
+void traverse_inorder_tree(BST *tree)
+{
 
+}
 
+void traverse_inorder_node(Node *root)
+{
 
+}
 
 
 
