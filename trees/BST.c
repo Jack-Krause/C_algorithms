@@ -33,21 +33,15 @@ Node *insert(Node *root, int data)
     return root;
 };
 
-BST *insert_tree(BST *bst, int key)
+void insert_tree(BST *bst, int key)
 {
-    if (bst == NULL || bst->size == 0)
+    if (bst == NULL)
     {
-        BST *new_tree = create_empty_tree();
-        new_tree->root = insert(new_tree->root, key);
-        new_tree->size = (new_tree->size) + 1; // could just set to 1 probably
-        return new_tree;
-    } 
-    else
-    {
-        insert(bst->root, key);
-        bst->size = (bst->size) + 1;
-        return bst;
+        return;
     }
+
+    bst->root = insert(bst->root, key);
+    bst->size++;
 }
 
 

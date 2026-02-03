@@ -18,7 +18,7 @@ typedef struct BST
 
 Node *insert(Node *root, int data);
 
-BST *insert_tree(BST *tree, int key);
+void insert_tree(BST *bst, int key);
 
 BST *create_empty_tree();
 
