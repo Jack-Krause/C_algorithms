@@ -1,5 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -g
+# CFLAGS += -DDEBUG
 
 all: testbst
 
