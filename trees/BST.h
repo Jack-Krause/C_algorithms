@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct Node
 {
@@ -33,3 +34,7 @@ void traverse_inorder_node(Node *root);
 void traverse_levelorder_tree(BST *tree);
 
 void traverse_levelorder_node(Node *root);
+
+bool search(BST *bst, int key);
+
+bool search_rec(Node *root, int key);

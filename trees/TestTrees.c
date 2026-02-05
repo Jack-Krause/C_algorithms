@@ -75,5 +75,20 @@ int main(void)
 
     printf("in-order traversal is: ");
     traverse_inorder_tree(bst);
+
+    ASSERT_EQ_INT(1, search(bst, 10));
+    ASSERT_EQ_INT(1, search(bst, 20));
+    ASSERT_EQ_INT(1, search(bst, 30));
+    ASSERT_EQ_INT(1, search(bst, 100));
+    ASSERT_EQ_INT(1, search(bst, 500));
+    
+    ASSERT_EQ_INT(0, search(bst, -5));
+    ASSERT_EQ_INT(0, search(bst, 11));
+    ASSERT_EQ_INT(0, search(bst, 21));
+    ASSERT_EQ_INT(0, search(bst, 29));
+    ASSERT_EQ_INT(0, search(bst, 499));
+
+
+
     return 0;
 }

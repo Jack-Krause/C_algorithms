@@ -111,5 +111,27 @@ void traverse_inorder_node(Node *root)
     traverse_inorder_node(root->right);
 }
 
+bool search(BST *bst, int key)
+{
 
+    if (bst == NULL) {
+        printf("[search] tree is null");
+        return false;
+    }
+
+    return search_rec(bst->root, key);
+}
+
+bool search_rec(Node *root, int key)
+{
+    if (root == NULL) return false;
+    
+    if (root->data == key) {
+        return true;
+    } else if (key < root->data) { // search left sub-tree
+        return search_rec(root->left, key);
+    } else {
+        return search_rec(root->right, key);
+    }
+}
 

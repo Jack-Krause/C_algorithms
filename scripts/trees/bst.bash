@@ -4,5 +4,5 @@ cd ..
 cd ..
 make clean
 make
-clear
+# clear
 ./testbst
